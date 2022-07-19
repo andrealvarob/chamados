@@ -1,5 +1,7 @@
 <?php
 
+<?php
+
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
@@ -28,3 +30,5 @@ Route::get('/chamados/{id}', [ChamadoController::class, 'show'])->name('chamados
 Route::get('/', function () {
     return view('welcome');
 });
+
+require __DIR__.'/auth.php';

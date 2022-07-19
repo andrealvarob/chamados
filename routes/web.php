@@ -28,3 +28,9 @@ Route::get('/chamados/{id}', [ChamadoController::class, 'show'])->name('chamados
 Route::get('/', function () {
     return view('welcome');
 });
+
+require __DIR__.'/auth.php';
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

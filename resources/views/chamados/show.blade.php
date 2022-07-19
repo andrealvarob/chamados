@@ -4,13 +4,13 @@
     <h1>Dados do chamado</h1>
 
     <ul>
-        <li>{{$chamado->titulo}}</li>
-        <li>{{$chamado->solicitacao}}</li>
-        <li>{{$chamado->data}}</li>
-        <li>{{$chamado->status}}</li>
-        <li>{{$chamado->prioridade}}</li>
-        <li>{{$chamado->solicitante}}</li>
-        <li>{{$chamado->setor}}</li>
+        <li>Título: {{$chamado->titulo}}</li>
+        <li>Solicitção: {{$chamado->solicitacao}}</li>
+        <li>Data: {{$chamado->data}}</li>
+        <li>Status: {{$chamado->status}}</li>
+        <li>Prioridade: {{$chamado->prioridade}}</li>
+        <li>Solicitante: {{$chamado->solicitante}}</li>
+        <li>Setor: {{$chamado->setor}}</li>
     </ul>
 
     <form action="{{route('chamados.delete', $chamado->id)}}" method="post">

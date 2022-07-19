@@ -34,4 +34,14 @@ class ChamadoController extends Controller{
 
         return redirect()->route('chamados.index');
     }
+
+    public function delete($id){
+        if(!$chamado = Chamado::find($id))
+            return redirect()->route('chamados.index');
+
+        $chamado->delete();
+        
+
+        return redirect()->route('chamados.index');
+    }
 }

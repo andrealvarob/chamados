@@ -17,6 +17,8 @@ use App\Http\Controllers\{
 |
 */
 
+
+Route::delete('/chamados/{id}', [ChamadoController::class, 'delete'])->name('chamados.delete');
 Route::get('/chamados', [ChamadoController::class, 'index'])->name('chamados.index');
 Route::get('/chamados/create', [ChamadoController::class, 'create'])->name('chamados.create');
 Route::post('/chamados', [ChamadoController::class, 'store'])->name('chamados.store');

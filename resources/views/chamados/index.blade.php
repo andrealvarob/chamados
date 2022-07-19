@@ -9,7 +9,9 @@
         @foreach ($chamados as $chamado)
             <li>
                 {{$chamado->titulo}} - 
-                {{$chamado->prioridade}}
+                {{$chamado->solicitacao}} -
+                {{$chamado->solicitante}} -
+                {{$chamado->setor}}
                 | <a href="{{ route('chamados.show', $chamado->id)}}">Ver mais</a> 
             </li>
     @endforeach
